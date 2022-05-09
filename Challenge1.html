@@ -1,0 +1,90 @@
+<meta charset="UTF-8">
+<br>
+<br>
+<script>
+    function lineJump() {
+        document.write("<br>");
+    }
+
+    function print(frase) {
+        document.write(frase);
+        lineJump();
+    }
+
+    function lowercase() {
+        console.log(textoCifrado.toLowerCase());
+    }
+
+    function lowerCaseOnly() { <
+        input type = "text"
+        name = "documento"
+        id = "documento"
+        class = "form-control"
+        required autocomplete = "off"
+        onkeypress = "return ((event.charCode >= 97 && event.charCode <=122)&&(event.charCode) != [32,39,34,42,43,47,92,93,64,209,241,125,105]) "
+        min = "1" / >
+    }
+
+    function copy() {
+        var copiar = document.getElementById("result");
+    }
+    /*primera forma de enriptar encontrada*/
+    function encriptardor(elemento) {
+        var palabra = document.getElementsByTagName("input")[0].value;
+        var palabra_Codificada = btoa(palabra);
+        document.getElementById("resultado").innerHTML = palabra_Codificada;
+    }
+
+    function desencriptador(elemento) {
+        var palabra = document.getElementsByTagName("input")[0].value;
+        var palabra_Descodificada = atob(palabra);
+        document.getElementById("resultado").innerHTML = palabra_Descodificada;
+    }
+
+    function encriptar(elemento) {
+        var texto = document.querySelector("texto").value;
+        var textoCifrado = texto.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
+        document.querySelector("result").value = textoCifrado;
+        document.querySelector("texto").value;
+    }
+
+    /*segunda forma de encriptacion encontrada CryptoJs*/
+    var encrypted = CryptoJS.AES.encrypt("This is my secret message", "EncryptionKey");
+    var decrypted = CryptoJS.AES.decrypt(encrypted, "EncryptionKey");
+
+    /*tercera forma de encriptar y desencriptar*/
+    import ncrypt from 'ncrypt-js';
+    const encrypted = ncrypt.encrypt('This is my secret message', 'Secret key');
+    console.log(encrypted);
+    const decrypted = ncrypt.decrypt(encrypted);
+    console.log(decrypted);
+
+    /*este es el que necesito usar por requsitos del curso*/
+    function encriptar(elemento) {
+        var texto = document.querySelector("texto").value;
+        var textoCifrado = texto.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
+        document.querySelector("result").value = textoCifrado;
+        document.querySelector("texto").value;
+    }
+
+
+
+    var boton1 = document.querySelector("#btn-encriptar");
+    boton1.onclick = encriptar;
+
+    function desencriptar() {
+        var texto = document.querySelector("#input-texto").value;
+        var textoCifrado = texto.replace(/enter/gi, "e").replace(/imes/gi, "i").replace(/ai/gi, "a").replace(/ober/gi, "o").replace(/ufat/gi, "u");
+        document.querySelector(".text-input-salida").value = textoCifrado;
+        document.querySelector("#input-texto").value;
+
+    }
+
+    var boton2 = document.querySelector("#btn-desencriptar");
+    boton2.onclick = desencriptar;
+</script>
+
+/*function copy() { var copiar = document.getElementById("result"); } */ /*function encriptar() { var textoRecibido = document.getElementById("texto"); var textoEncrypt = }*/ /*base de la funcion encriptar*/ /* function encriptardor(elemento) { var palabra
+= document.getElementById("texto")[0].value; var palabra_Codificada = btoa(palabra); document.getElementById("result").innerHTML = palabra_Codificada; }*/ /*este es el que necesito usar por requsitos del curso function encriptar(elemento) { var texto
+= document.querySelector("texto").value; var textoCifrado = texto.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat"); document.querySelector("result").value = textoCifrado; document.querySelector("texto").value;
+}*/ /*pendiente de modificaion hasta que funcione encriptar*/

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html leng="es, eng">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1">
+    <title>Easy Encrypting</title>
+    <link rel="stylesheet" href="Challenge1.css" href="main.js">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1> Easy Encrypting </h1>
+        <img id="banner" src="imagenes/Logo.jpg">
+
+    </header>
+
+    <div>
+        <nav class="bot">
+            <input class="text-input" type="text" id="texto" placeholder="Escriba lo que desea encriptar en minuscula" name="" type="text" onkeypress="soloLetras('texto');" onkeyup="this.value=this.value.toLowerCase();" required>
+            <br>
+            <input class="text-input-salida" type="text" id="result" placeholder="No se ha registrado ningùn mensaje" readonly="readonly">
+            <input class="encriptado" type="submit" id="encrypt" value="Encrypt" onclick="encriptar('texto')">
+            <br>
+            <input class="desencriptado" type="submit" id="Undo" value="Undo" onclick="desencriptar('texto')">
+            <br>
+            <input class="copy" type="button" id="Copy" value="Copy"></button>
+            <br>
+        </nav>
+    </div>
+    <img id="banner2" src="imagenes/Muñeco.jpg" class="imagenes">
+
+    <script src="main.js">
+    </script>
+    <div>
+        <input class="creador" type="text" id="creador" value="Produced by Erick Z" readonly="readonly">
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+body {
+    background: #F3F5FC;
+}
+
+header {
+    font-style: italic;
+}
+
+.bot {
+    background: brown;
+}
+
+#texto {
+    position: absolute;
+    vertical-align: left;
+    width: 45%;
+    height: 100px;
+    top: 35%;
+    left: 5%;
+    color: #0A3871;
+    border-radius: 24px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+#result {
+    position: absolute;
+    vertical-align: right;
+    width: 30%;
+    height: 520px;
+    top: 10%;
+    right: 3%;
+    color: #0A3871;
+    border-radius: 24px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+#banner2 {
+    position: absolute;
+    box-sizing: border-box;
+    width: 20%;
+    height: 200px;
+    right: 10%;
+    top: 15%;
+}
+
+input[id=encrypt] {
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    position: absolute;
+    width: 15%;
+    height: 50px;
+    left: 15%;
+    top: 90%;
+    padding: 10px;
+    background: #5c97df;
+    border-radius: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 10px 10px;
+}
+
+input[id=Undo] {
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    position: absolute;
+    width: 15%;
+    height: 50px;
+    left: 35%;
+    top: 90%;
+    padding: 10px;
+    background: #b6c3d3;
+    border-radius: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 10px 10px;
+}
+
+input[type=button] {
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    position: absolute;
+    width: 12%;
+    height: 50px;
+    left: 75%;
+    top: 80%;
+    padding: 10px;
+    background: #71e1a5;
+    border-radius: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 10px 10px;
+}
+
+input[id=creador] {
+    top: 9%;
+    left: 3%;
+    border: #0A3871;
+}
+
+
+/*#encrypt {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    position: absolute;
+    width: 15%;
+    height: 50px;
+    left: 15%;
+    top: 90%;
+    padding: 10px;
+    background: #5c97df;
+    border-radius: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 10px 10px;
+}
+
+#Undo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    position: absolute;
+    width: 15%;
+    height: 50px;
+    left: 35%;
+    top: 90%;
+    padding: 10px;
+    background: #b6c3d3;
+    border-radius: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 10px 10px;
+}
+
+#Copy {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    position: absolute;
+    width: 12%;
+    height: 50px;
+    left: 75%;
+    top: 80%;
+    padding: 10px;
+    background: #71e1a5;
+    border-radius: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 10px 10px;
+}*/
