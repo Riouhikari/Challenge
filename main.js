@@ -72,6 +72,42 @@ function copiarAlPortapapeles(id_elemento) {
 
 }
 
+function copiarAlPortapeles() {
+    var texto = texto.getElementById('result') = "";
+    if (typeof texto != 'string') {
+        throw TypeError('El argumento debe ser una cadena de caracteres.');
+    }
+
+    let areaTexto = document.createElement('textarea');
+    areaTexto.value = texto;
+    areaTexto.setAttribute('readonly', '');
+    areaTexto.style.position = 'absolute';
+    areaTexto.style.left = '-9999px';
+
+    document.body.appendChild(areaTexto);
+
+    let seleccionado = document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : false;
+
+    areaTexto.select();
+
+    document.execCommand('copy');
+
+    document.body.removeChild(areaTexto);
+
+    if (seleccionado) {
+        document.getSelection().removeAllRanges();
+        document.getSelection().addRange(seleccionado);
+    }
+}
+
+window.onload = function() {
+    document.getElementById('copiar').addEventListener('click', () => {
+        let contenido = document.getElementById('contenido').value;
+
+        copiarAlPortapeles(contenido);
+    });
+}
+
 function copyToClickBoard() {
     var content = document.getElementById('result').innerHTML;
 
@@ -87,7 +123,7 @@ function copyToClickBoard() {
 
 function paste() {
     let pasteText = document.querySelector("text-input");
-    pasteText.focus();
+    pasteText.s
     document.pasteText("paste");
     console.log(pasteText.textContent);
 }
